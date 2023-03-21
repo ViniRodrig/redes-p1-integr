@@ -15,7 +15,7 @@ class Servidor:
 
     def _rdt_rcv(self, src_addr, dst_addr, segment):
         src_port,dst_port,seq_no,ack_no,flags,window_size,checksum,urg_ptr = read_header(segment)
-
+        print(dst_port)
         if dst_port != self.porta:
             # Ignora segmentos que não são destinados à porta do nosso servidor
             print("ERRO! Porta não destinada")
